@@ -14,7 +14,7 @@ No hay llaves específicas para la encriptación, ya que cada carácter se convi
 
 ### :hammer: Funcionalidades
 
-- `Funcionalidad 1`: Debe funcionar solo con letras minúsculas.
+- `Funcionalidad 1`: Debe funcionar solo con letras minúsculas o numeros enteros.
 - `Funcionalidad 2`: No deben ser utilizadas letras con acentos ni caracteres especiales.
 - `Funcionalidad 3`: Debe ser posible convertir una palabra a su versión encriptada en binario y devolver la palabra encriptada a su versión original. Por ejemplo: "gato" => "1100111 1100001 1110100 1101111" y "1100111 1100001 1110100 1101111" => "gato".
 - `Funcionalidad 4`: La página debe tener campos para la inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre las dos opciones.
