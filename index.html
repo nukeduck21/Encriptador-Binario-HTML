@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Challenge - Encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffeeee;
+            color: #440000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #660000;
+            color: white;
+        }
+
+        header .logo {
+            max-width: 150px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #ffeeee;
+            border: 2px solid #660000;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 40%;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 15px;
+            border: 1px solid #660000;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 1em;
+            background-color: #fff5f5;
+        }
+
+        .restriccion {
+            color: #aa0000;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .botones button {
+            background-color: #aa0000;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .botones button:hover {
+            background-color: #cc0000;
+        }
+
+        .dinamico {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dinamico h2, .dinamico h3 {
+            margin: 10px 0;
+        }
+
+        .dinamico .copiar {
+            display: inline-block;
+            background-color: #aa0000;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .dinamico .copiar:hover {
+            background-color: #cc0000;
+        }
+
+        .dinamico .anuncio {
+            display: block;
+            margin-bottom: 10px;
+            color: #aa0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #660000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="imagenes/logo-alura.png" alt="Logo de Alura">
+    </header>
+
+    <main>
+        <section>
+            <textarea class="entrada-texto" cols="30" rows="10" placeholder="Ingrese el texto aquí" autofocus></textarea>
+            <div>
+                <h6 class="restriccion">&#9888 Solo letras minúsculas y numeros.</h6>
+            </div>
+            <div class="botones">
+                <button name="encriptar" class="encriptar" onclick="encriptar()">Encriptar </button>
+                <button name="desencriptar" class="desencriptar" onclick="desencriptar()">Desencriptar </button>
+            </div>
+        </section>
+        <section>
+            <textarea class="salida-texto" cols="30" rows="10" disabled></textarea>
+            <div class="dinamico">
+                <h2 class="texto1">Ningún mensaje fue encontrado</h2>
+                <h3 class="texto2">Ingresa el texto que desees encriptar o desencriptar.</h3>
+                <button name="copiar" class="copiar" onclick="copiar()" style="display: none;"><span class="anuncio"></span>Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; Desarrollado por Oscar Alvarez</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
